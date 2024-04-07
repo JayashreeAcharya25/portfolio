@@ -1,0 +1,62 @@
+.home-work {
+    font-family: "Poppins", sans-serif;
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .work-container {
+        padding: 10px;
+        h2 {
+            font-weight: 700;
+            font-size: 48px;
+            @media screen and (max-width: 575px) {
+                font-size: 38px;
+            }
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .swiper-card {
+            width: 320px;
+            .card-container {
+                padding: 15px;
+
+                img {
+                    height: 300px;
+                }
+
+                .text-container {
+                    padding: 20px 0;
+
+                    h4 {
+                        font-size: 20px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        -webkit-line-clamp: 2;
+                    }
+
+                    .btn {
+                        font-size: 12px;
+                        padding: 6px 18px;
+                        float: right;
+                        background: var(--bg-purple-lilac);
+                        border: 1px solid var(--highlight);
+                        color: var(--carbon-blac);
+                        &:hover{
+                            background: var(--highlight);
+                            color: var(--white);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

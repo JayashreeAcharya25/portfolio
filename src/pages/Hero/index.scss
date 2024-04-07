@@ -1,0 +1,27 @@
+.home-hero{
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: var(--bg-purple-lilac);
+
+    .hero-container{
+        .text-container{
+            h6{
+                font-weight: 600;
+                letter-spacing: 1px;
+                font-size: 28px;
+            }
+
+            h1{
+                font-weight: 700;
+                font-size: 58px;
+            }
+
+            p{
+                font-size: 28px;
+            }
+
+        }
+    }
+}
