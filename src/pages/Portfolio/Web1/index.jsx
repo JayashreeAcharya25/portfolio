@@ -49,7 +49,7 @@ export default function Web1() {
                   <li>
                     <p>
                       Animation :{" "}
-                      <span className="tagline">AOS (Aniamtion On Scroll)</span>
+                      <span className="tagline">AOS (Animation On Scroll)</span>
                     </p>
                   </li>
                   <li>

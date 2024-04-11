@@ -1,11 +1,11 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "./index.scss";
-import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import portfolio_1 from "../../assets/portfolio-1.png";
+import work_icon from "../../assets/work-icon.svg";
 
 export default function Work() {
   return (
@@ -13,19 +13,22 @@ export default function Work() {
       <div className="home-work">
         <div className="container">
           <div className="work-container row">
-            <div className="col-md-7">
+          <div className="col-md-12">
+              <div className="text-container">
+                <h2 className="mb-4">
+                  My <span className="text-highlight">Work</span>
+                </h2>
+                <p>
+                  Delve into a handpicked showcase of my recent projects,
+                  illustrating my skillset in web development
+                </p>
+                {/* <img className="img-fluid" src={work_icon} alt="" /> */}
+              </div>
+            </div>
+            <div className="col-md-12 mt-4 mt-md-5">
               <Swiper
-                effect={"coverflow"}
                 grabCursor={true}
-                centeredSlides={true}
-                slidesPerView={1}
-                coverflowEffect={{
-                  rotate: 50,
-                  stretch: 0,
-                  depth: 100,
-                  modifier: 1,
-                  slideShadows: true,
-                }}
+                slidesPerView={2}
                 pagination={{
                   clickable: true,
                 }}
@@ -34,7 +37,7 @@ export default function Work() {
                   pauseOnMouseEnter: true,
                 }}
                 loop={true}
-                modules={[EffectCoverflow, Pagination, Autoplay]}
+                modules={[ Pagination, Autoplay]}
                 className="swiper-card"
               >
                 <SwiperSlide>
@@ -44,7 +47,21 @@ export default function Work() {
                       <div className="text-container">
                         <h4>Cafe Drove</h4>
                         <p>Where Coffee and Community Meet in a Cup.</p>
-                        <a className="btn" href="/cafe-drove">
+                        <a className="btn custom-btn" href="/cafe-drove">
+                          Read More
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="card-container">
+                    <div className="card-section">
+                      <img className="img-fluid" src={portfolio_1} alt="" />
+                      <div className="text-container">
+                        <h4>Cafe Drove</h4>
+                        <p>Where Coffee and Community Meet in a Cup.</p>
+                        <a className="btn custom-btn" href="/cafe-drove">
                           Read More
                         </a>
                       </div>
@@ -53,17 +70,7 @@ export default function Work() {
                 </SwiperSlide>
               </Swiper>
             </div>
-            <div className="col-md-5">
-              <div className="text-container">
-                <h2 className="mb-4">
-                  My <span className="text-highlight">Work</span>
-                </h2>
-                <p>
-                  Delve into a handpicked showcase of my recent projects,
-                  illustrating my skillset in web development
-                </p>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>
